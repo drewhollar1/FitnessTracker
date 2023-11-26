@@ -129,10 +129,10 @@ for col in outlier_columns:
 
 # Check for normal distribution
 df[outlier_columns[:3] + ["label"]].plot.hist(
-    by="label", figsize=(20, 10), layout=(3, 3)
+    by="label", figsize=(20, 20), layout=(3, 3)
 )
 df[outlier_columns[3:] + ["label"]].plot.hist(
-    by="label", figsize=(20, 10), layout=(3, 3)
+    by="label", figsize=(20, 20), layout=(3, 3)
 )
 
 
@@ -229,7 +229,7 @@ for col in outlier_columns:
 # --------------------------------------------------------------
 # Check outliers grouped by label
 # --------------------------------------------------------------
-label = "bench"
+label = "squat"
 
 for col in outlier_columns:
     dataset = mark_outliers_iqr(df[df["label"] == label], col)
@@ -271,7 +271,7 @@ for col in outlier_columns:
             col
         ]
 
-        n_outliers = len(df) - len(outliers_removed_df[col].dropna())
+        n_outliers = len(dataset) - len(dataset[col].dropna())
         print(f"Removed {n_outliers} from {col} for {label}")
 
 outliers_removed_df.info()
