@@ -1,3 +1,2 @@
-## Data Science Project Template
-
-You can use this template to structure your Python data science projects. It is based on [Cookie Cutter Data Science](https://drivendata.github.io/cookiecutter-data-science/).
+Project Overview
+The Machine Learning Fitness Tracker is a Python-based application designed to count repetitions and classify different strength training exercises using motion data collected from accelerometer and gyroscope sensors. This project utilizes a range of machine learning and signal processing techniques to create an effective exercise-tracking tool that can distinguish between five types of strength exercises.
